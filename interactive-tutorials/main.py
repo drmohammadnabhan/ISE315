@@ -1,13 +1,12 @@
 import streamlit as st
-from apps import type1_type2_properties
 
-# Dictionary of available apps
-apps = {
-    "Type I and II Properties": type1_type2_properties
-}
+st.set_page_config(page_title="ISE-315 Tutorials", layout="wide")
 
-st.sidebar.title("ISE315 - Interactive Tutorials")
-choice = st.sidebar.radio("Select a tutorial", list(apps.keys()))
+st.title("Welcome to ISE-315 Interactive Tutorials")
+st.markdown("""
+### Available Tutorials
+- Navigate to the tutorials using the sidebar.
+""")
 
-# Run selected app
-apps[choice].run()
+st.sidebar.title("Navigation")
+st.sidebar.info("Use the sidebar to navigate through different tutorials.")
